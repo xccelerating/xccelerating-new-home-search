@@ -13,7 +13,204 @@
 </head>
 <body>
   <main>
-    <!-- Styleguide content placeholder -->
+    <section class="section">
+      <div class="container">
+        <h1 class="mb-md">Xccelerating Design System</h1>
+        <p class="mb-lg">Core components and UI patterns for the Xccelerating experience.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="mb-md">Buttons</h2>
+        <div class="flex" style="gap: 12px; flex-wrap: wrap;">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-danger">Danger</button>
+          <button class="btn btn-ghost">Ghost</button>
+          <button class="btn btn-primary btn-sm">Small</button>
+          <button class="btn btn-primary btn-lg">Large</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="mb-md">Badges</h2>
+        <div class="flex" style="gap: 12px; flex-wrap: wrap;">
+          <span class="badge badge-gold">Featured</span>
+          <span class="badge badge-black">New</span>
+          <span class="badge badge-red">Hot</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="mb-md">Forms</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <div>
+            <div class="form-group">
+              <label class="form-label" for="sg-name">Name</label>
+              <input class="form-input" id="sg-name" type="text" placeholder="Jane Doe" />
+              <div class="form-helper">This is helper text.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sg-email">Email</label>
+              <input class="form-input form-input--error" id="sg-email" type="email" placeholder="jane@email.com" />
+              <div class="form-error-message">Please enter a valid email.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sg-message">Message</label>
+              <textarea class="form-textarea" id="sg-message" placeholder="Tell us about your dream home..."></textarea>
+            </div>
+          </div>
+          <div>
+            <div class="form-group">
+              <label class="form-label" for="sg-type">Home Type</label>
+              <select class="form-select" id="sg-type">
+                <option>Single Family</option>
+                <option>Townhome</option>
+                <option>Condo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <div class="form-check-stack">
+                <label class="form-check">
+                  <input class="form-check-input" type="checkbox" checked />
+                  <span class="form-check-label">Email updates</span>
+                </label>
+                <label class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="form-check-label">Text alerts</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check-stack">
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="sg-preference" checked />
+                  <span class="form-check-label">Buy</span>
+                </label>
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="sg-preference" />
+                  <span class="form-check-label">Sell</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="mb-md">Navigation</h2>
+      </div>
+      <nav class="nav nav--static">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <span class="badge badge-gold">Xccelerating</span>
+          </div>
+          <div class="nav-links">
+            <a class="nav-link nav-link--active" href="#">Home</a>
+            <a class="nav-link" href="#">Listings</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Contact</a>
+          </div>
+          <div class="nav-cta">
+            <button class="btn btn-primary">Book a Tour</button>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="mb-md">Footer</h2>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+              <div class="footer-brand">Xccelerating Real Estate</div>
+              <p class="footer-text mt-sm">Guiding buyers and sellers with a personalized approach.</p>
+            </div>
+            <div>
+              <div class="footer-heading mb-sm">Company</div>
+              <div class="footer-contact">
+                <a class="footer-link" href="#">About</a>
+                <a class="footer-link" href="#">Careers</a>
+                <a class="footer-link" href="#">Blog</a>
+              </div>
+            </div>
+            <div>
+              <div class="footer-heading mb-sm">Contact</div>
+              <div class="footer-contact">
+                <span>hello@xccelerating.com</span>
+                <span>(555) 123-4567</span>
+                <span>Charlotte, NC</span>
+              </div>
+            </div>
+            <div>
+              <div class="footer-heading mb-sm">Follow</div>
+              <div class="footer-social">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="YouTube">YT</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-legal">© 2025 Xccelerating Real Estate. All rights reserved.</div>
+        </div>
+      </footer>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="mb-md">Modal</h2>
+        <div class="modal">
+          <div class="modal-header">
+            <h3>Schedule a Tour</h3>
+            <button class="modal-close" aria-label="Close modal">✕</button>
+          </div>
+          <div class="modal-body">
+            <p>Share a few details and we’ll connect you with the right agent.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary">Cancel</button>
+            <button class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="mb-md">Chat Widget</h2>
+        <div class="chat-widget chat-widget--static">
+          <button class="chat-toggle" aria-label="Open chat">💬</button>
+          <div class="chat-box open" style="margin-top: 16px;">
+            <div class="chat-header">
+              <strong>Chat with us</strong>
+              <button class="chat-close" aria-label="Close chat">✕</button>
+            </div>
+            <div class="chat-messages">
+              <div class="chat-message chat-message--agent">Hi! How can we help today?</div>
+              <div class="chat-message chat-message--user">Looking for a 3BR in Charlotte.</div>
+            </div>
+            <div class="chat-quick-replies">
+              <button class="btn btn-secondary btn-sm">Schedule Tour</button>
+              <button class="btn btn-secondary btn-sm">Browse Listings</button>
+            </div>
+            <div class="chat-input-area">
+              <input class="form-input" type="text" placeholder="Type a message..." />
+              <button class="btn btn-primary btn-sm">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <script src="/js/main.js"></script>
 </body>
