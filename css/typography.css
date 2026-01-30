@@ -1,0 +1,72 @@
+body {
+  font-size: var(--text-base);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: var(--lh-tight);
+  color: var(--color-secondary);
+}
+
+h1 {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+p {
+  font-size: var(--text-base);
+  line-height: var(--lh-normal);
+}
+
+.text-sm { font-size: var(--text-sm); }
+.text-lg { font-size: var(--text-lg); }
+.text-xl { font-size: var(--text-xl); }
+
+.text-gold { color: var(--xcc-gold); }
+.text-red { color: var(--xcc-red); }
+.text-grey { color: var(--xcc-grey); }
+.text-white { color: var(--xcc-white); }
+.text-purple { color: var(--oig-purple); }
+
+.link {
+  color: var(--xcc-gold);
+  transition: color var(--transition-base);
+}
+
+.link:hover {
+  color: var(--xcc-black);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 36px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 20px; }
+  h4 { font-size: 18px; }
+}
