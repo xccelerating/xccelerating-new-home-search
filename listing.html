@@ -62,7 +62,8 @@
             </div>
             <div class="flex" style="gap: 12px; flex-wrap: wrap;">
               <button class="btn btn-primary" data-modal-open="#tour-modal">Schedule tour</button>
-              <button class="btn btn-secondary">Request info</button>
+              <button class="btn btn-secondary" data-modal-open="#offer-modal">Make an offer</button>
+              <button class="btn btn-ghost" data-modal-open="#preapprove-modal">Get pre‑approved</button>
             </div>
           </div>
           <div class="card-listing">
@@ -148,29 +149,16 @@
               </div>
             </div>
           </div>
-          <form class="card-listing" style="padding: 24px;">
-            <div class="form-group">
-              <label class="form-label" for="tour-name">Full name</label>
-              <input class="form-input" id="tour-name" type="text" placeholder="Taylor Morgan" />
+          <div class="card-listing" style="padding: 24px; display: grid; gap: 16px;">
+            <h3 class="mb-sm">Book a tour</h3>
+            <div style="background: #f2f2f2; border-radius: 12px; padding: 12px;">
+              <div class="text-sm text-grey">Calendar placeholder (GHL embed goes here)</div>
+              <div style="height: 280px; display: grid; place-items: center; color: #777;">Calendar Embed</div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="tour-email">Email address</label>
-              <input class="form-input" id="tour-email" type="email" placeholder="taylor@email.com" />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="tour-phone">Phone</label>
-              <input class="form-input" id="tour-phone" type="tel" placeholder="(555) 123-4567" />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="tour-date">Preferred tour time</label>
-              <input class="form-input" id="tour-date" type="text" placeholder="Saturday, 2-4 PM" />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="tour-message">Questions or priorities</label>
-              <textarea class="form-textarea" id="tour-message" placeholder="Backyard size, HOA details, schools"></textarea>
-            </div>
-            <button class="btn btn-primary btn-block" type="submit">Request tour</button>
-          </form>
+            <button class="btn btn-primary btn-block" data-modal-open="#tour-modal">Schedule a tour</button>
+            <button class="btn btn-secondary btn-block" data-modal-open="#offer-modal">Make an offer</button>
+            <button class="btn btn-ghost btn-block" data-modal-open="#preapprove-modal">Get pre‑approved</button>
+          </div>
         </div>
       </div>
     </section>
@@ -306,6 +294,62 @@
       <div class="modal-footer">
         <button class="btn btn-secondary" data-modal-close>Cancel</button>
         <button class="btn btn-primary">Submit request</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="offer-modal" data-modal>
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Make an offer</h3>
+        <button class="modal-close" data-modal-close aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label" for="offer-price">Offer price</label>
+          <input class="form-input" id="offer-price" type="text" placeholder="$825,000" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="offer-down">Down payment</label>
+          <input class="form-input" id="offer-down" type="text" placeholder="$82,500" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="offer-notes">Notes</label>
+          <textarea class="form-textarea" id="offer-notes" placeholder="Contingencies, closing timeline, etc."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-modal-close>Cancel</button>
+        <button class="btn btn-primary">Submit offer request</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="preapprove-modal" data-modal>
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Get pre‑approved</h3>
+        <button class="modal-close" data-modal-close aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-md">Tell us a little about your timeline and budget and we’ll connect you with a lender.</p>
+        <div class="form-group">
+          <label class="form-label" for="prequal-timeline">Buying timeline</label>
+          <select class="form-select" id="prequal-timeline">
+            <option>0–3 months</option>
+            <option>3–6 months</option>
+            <option>6–12 months</option>
+            <option>Just researching</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="prequal-budget">Target budget</label>
+          <input class="form-input" id="prequal-budget" type="text" placeholder="$650,000" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-modal-close>Cancel</button>
+        <button class="btn btn-primary">Request pre‑approval</button>
       </div>
     </div>
   </div>
