@@ -109,17 +109,25 @@ function initChatWidget() {
   if (!root.children.length) {
     root.innerHTML = `
       <div class="chat-widget" data-chat-widget>
-        <button class="chat-widget__toggle" type="button" data-chat-toggle aria-expanded="false">
-          Chat with us
+        <button class="chat-toggle" type="button" data-chat-toggle aria-expanded="false" aria-label="Open chat">
+          💬
         </button>
-        <div class="chat-widget__panel" data-chat-panel aria-hidden="true">
-          <div class="chat-widget__header">
-            <span>Chat with Xccelerating</span>
-            <button class="chat-widget__close" type="button" data-chat-close aria-label="Close chat">×</button>
+        <div class="chat-box" data-chat-panel aria-hidden="true">
+          <div class="chat-header">
+            <span>Chat with Own It Gyrl</span>
+            <button class="chat-close" type="button" data-chat-close aria-label="Close chat">×</button>
           </div>
-          <div class="chat-widget__body">
-            <p>Have a question about buying or selling? We’re here to help.</p>
-            <p><a href="mailto:hello@xccelerating.com">Email us</a> or call <a href="tel:+18005551234">(800) 555-1234</a>.</p>
+          <div class="chat-messages">
+            <div class="chat-message chat-message--agent">Hi! How can we help with your home search today?</div>
+          </div>
+          <div class="chat-quick-replies">
+            <button class="btn btn-secondary btn-sm" type="button">Schedule a tour</button>
+            <button class="btn btn-secondary btn-sm" type="button">Pre‑qualify</button>
+            <button class="btn btn-secondary btn-sm" type="button">Ask a question</button>
+          </div>
+          <div class="chat-input-area">
+            <input class="form-input" type="text" placeholder="Type a message" />
+            <button class="btn btn-primary btn-sm" type="button">Send</button>
           </div>
         </div>
       </div>
@@ -132,13 +140,13 @@ function initChatWidget() {
   if (!toggle || !panel) return;
 
   const openChat = () => {
-    panel.classList.add('is-open');
+    panel.classList.add('open');
     toggle.setAttribute('aria-expanded', 'true');
     panel.setAttribute('aria-hidden', 'false');
   };
 
   const closeChat = () => {
-    panel.classList.remove('is-open');
+    panel.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
     panel.setAttribute('aria-hidden', 'true');
   };
