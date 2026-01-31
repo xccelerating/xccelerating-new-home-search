@@ -22,11 +22,11 @@
         <div class="nav-links">
           <a class="nav-link" href="/index.html">Home</a>
           <a class="nav-link" href="/listing.html">Listings</a>
-          <a class="nav-link nav-link--active" href="https://prenegotiatedhomes.com/master-class">Masterclass</a>
+          <a class="nav-link nav-link--active" href="/masterclass.html">Masterclass</a>
           <a class="nav-link" href="/index.html#contact">Contact</a>
         </div>
         <div class="nav-cta">
-          <a class="btn btn-primary btn-sm" href="/index.html#tour">Book a Tour</a>
+          <a class="btn btn-primary btn-sm" href="/listing.html#tour">Book a Tour</a>
         </div>
         <button class="nav-mobile-toggle" data-menu-toggle aria-controls="mobile-menu" aria-label="Toggle menu">Menu</button>
       </div>
@@ -34,9 +34,9 @@
         <div class="nav-links" style="flex-direction: column; padding: var(--space-xl); gap: var(--space-md);">
           <a class="nav-link" href="/index.html">Home</a>
           <a class="nav-link" href="/listing.html">Listings</a>
-          <a class="nav-link" href="https://prenegotiatedhomes.com/master-class">Masterclass</a>
+          <a class="nav-link" href="/masterclass.html">Masterclass</a>
           <a class="nav-link" href="/index.html#contact">Contact</a>
-          <a class="btn btn-primary btn-sm" href="/index.html#tour">Book a Tour</a>
+          <a class="btn btn-primary btn-sm" href="/listing.html#tour">Book a Tour</a>
         </div>
       </div>
     </nav>
@@ -49,15 +49,15 @@
           <div>
             <span class="badge badge-gold mb-md">Live Workshop</span>
             <h1 class="mb-md">Own It Gyrl Homebuying Masterclass</h1>
-            <p class="text-lg mb-lg">Learn the modern playbook for landing your dream home in today’s market. Get expert guidance on financing, negotiating, and winning your offer.</p>
+            <p class="text-lg mb-lg">Master the modern playbook for winning in today’s market—financing, strategy, and the offer tactics buyers are using right now.</p>
             <div class="flex" style="gap: 12px; flex-wrap: wrap;">
               <div>
                 <strong>Date:</strong>
-                <div class="text-sm">Thursday, April 24 • 6:30 PM ET</div>
+                <div class="text-sm">Thursday, May 16 • 6:30 PM ET</div>
               </div>
               <div>
                 <strong>Location:</strong>
-                <div class="text-sm">Virtual + Charlotte, NC</div>
+                <div class="text-sm">Live on Zoom + Charlotte watch party</div>
               </div>
             </div>
             <div class="mt-lg flex" style="gap: 12px; flex-wrap: wrap;">
@@ -67,28 +67,30 @@
           </div>
           <div id="register" style="background: var(--xcc-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: var(--space-lg);">
             <h3 class="mb-md">Register now</h3>
-            <p class="text-sm mb-md">Secure your spot and we’ll send the workbook + replay link.</p>
-            <form>
+            <p class="text-sm mb-md">Save your seat and we’ll send the workbook, checklist, and replay link.</p>
+            <form data-form="masterclass">
               <div class="form-group">
                 <label class="form-label" for="mc-name">Full name</label>
-                <input class="form-input" id="mc-name" type="text" placeholder="Alex Johnson" required />
+                <input class="form-input" id="mc-name" name="name" type="text" placeholder="Alex Johnson" required />
               </div>
               <div class="form-group">
                 <label class="form-label" for="mc-email">Email address</label>
-                <input class="form-input" id="mc-email" type="email" placeholder="alex@email.com" required />
+                <input class="form-input" id="mc-email" name="email" type="email" placeholder="alex@email.com" required />
               </div>
               <div class="form-group">
                 <label class="form-label" for="mc-goal">Primary goal</label>
-                <select class="form-select" id="mc-goal">
+                <select class="form-select" id="mc-goal" name="goal">
                   <option>Buying my first home</option>
                   <option>Upsizing or relocating</option>
                   <option>Investment property</option>
                   <option>Just exploring</option>
                 </select>
               </div>
+              <div class="form-helper" data-form-status aria-live="polite"></div>
               <button class="btn btn-primary btn-block" type="submit">Save my seat</button>
               <div class="form-helper mt-sm">We respect your inbox. Unsubscribe anytime.</div>
             </form>
+            <div class="embed-slot" data-embed="convert-masterclass" style="display:none;"></div>
           </div>
         </div>
       </div>
@@ -188,8 +190,8 @@
     <section class="section" style="background: #f7f5fb;">
       <div class="container text-center">
         <h2 class="mb-md">Ready to secure your spot?</h2>
-        <p class="text-lg mb-lg">Seats are limited. Register now and receive immediate access to the prep materials.</p>
-        <a class="btn btn-primary btn-lg" href="#register">Register for the masterclass</a>
+        <p class="text-lg mb-lg">Seats are limited. Register now to unlock your prep kit and bonus templates.</p>
+        <a class="btn btn-primary btn-lg" href="#register">Reserve my seat</a>
       </div>
     </section>
   </main>
@@ -205,7 +207,7 @@
           <div class="footer-heading mb-sm">Company</div>
           <div class="footer-contact">
             <a class="footer-link" href="/index.html">Home</a>
-            <a class="footer-link" href="https://prenegotiatedhomes.com/master-class">Masterclass</a>
+            <a class="footer-link" href="/masterclass.html">Masterclass</a>
             <a class="footer-link" href="/listing.html">Listings</a>
           </div>
         </div>
@@ -220,9 +222,9 @@
         <div>
           <div class="footer-heading mb-sm">Follow</div>
           <div class="footer-social">
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="Facebook">FB</a>
-            <a href="#" aria-label="YouTube">YT</a>
+            <a href="https://www.instagram.com/ownitgyrl/" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+            <a href="https://www.facebook.com/ownitgyrl/" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
+            <a href="https://www.youtube.com/@ownitgyrl" aria-label="YouTube" target="_blank" rel="noopener">YT</a>
           </div>
         </div>
       </div>
