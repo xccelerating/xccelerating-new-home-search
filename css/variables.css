@@ -68,4 +68,12 @@
   --color-primary: var(--oig-purple);
   --color-secondary: var(--oig-gold);
   --color-accent: var(--oig-purple-accent);
+  --color-muted: #d9cfe4;
+  --color-bg: #f7f3fb;
+
+  /* Override base palette to ensure components render in Own It Gyrl colors */
+  --xcc-gold: var(--oig-gold);
+  --xcc-black: var(--oig-purple);
+  --xcc-red: var(--oig-purple-accent);
+  --xcc-grey: #c8b8d8;
 }
