@@ -30,24 +30,373 @@
   <link rel="stylesheet" href="/css/pages.css" />
 </head>
 <body>
-  <!-- Navigation Placeholder -->
   <header id="site-header">
-    <!-- TODO: Navigation -->
+    <nav class="nav">
+      <div class="nav-container">
+        <a class="nav-logo" href="/index.html" aria-label="Xccelerating Real Estate">
+          <span class="badge badge-gold">Xccelerating</span>
+        </a>
+        <div class="nav-links">
+          <a class="nav-link nav-link--active" href="/index.html">Home</a>
+          <a class="nav-link" href="/listing.html">Listings</a>
+          <a class="nav-link" href="/masterclass.html">Masterclass</a>
+          <a class="nav-link" href="#resources">Resources</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <button class="btn btn-primary" data-modal-open="#tour-modal">Book a Tour</button>
+        </div>
+        <button class="nav-mobile-toggle btn btn-ghost" type="button" data-menu-toggle aria-controls="mobile-menu">
+          Menu
+        </button>
+      </div>
+    </nav>
+    <div class="nav-mobile-menu" id="mobile-menu" data-mobile-menu>
+      <div style="padding: 32px; display: grid; gap: 16px;">
+        <a class="nav-link" href="/index.html">Home</a>
+        <a class="nav-link" href="/listing.html">Listings</a>
+        <a class="nav-link" href="/masterclass.html">Masterclass</a>
+        <a class="nav-link" href="#resources">Resources</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <button class="btn btn-primary" data-modal-open="#tour-modal">Book a Tour</button>
+      </div>
+    </div>
   </header>
 
   <main>
-    <!-- Main content goes here -->
+    <section class="section" style="padding-top: 120px;">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: center;">
+          <div>
+            <span class="badge badge-black">Charlotte Metro Experts</span>
+            <h1 class="mt-md mb-md">Discover homes that match your lifestyle.</h1>
+            <p class="text-lg text-grey mb-lg">Xccelerating Real Estate pairs local insight with smart search tools so you can move faster, feel confident, and land the right home.</p>
+            <div class="flex" style="gap: 12px; flex-wrap: wrap;">
+              <button class="btn btn-primary" data-modal-open="#tour-modal">Schedule a Tour</button>
+              <a class="btn btn-secondary" href="/listing.html">Browse Featured Listings</a>
+            </div>
+            <div class="flex mt-lg" style="gap: 24px; flex-wrap: wrap;">
+              <div>
+                <div class="counter-number" data-counter="350" data-counter-suffix="+"></div>
+                <div class="text-sm text-grey">Homes sold in the past 24 months</div>
+              </div>
+              <div>
+                <div class="counter-number" data-counter="28" data-counter-suffix="h"></div>
+                <div class="text-sm text-grey">Average response time</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card-listing" style="padding: 0;">
+              <div class="card-listing__photo">
+                <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=900&q=80" alt="Modern home exterior" />
+                <span class="badge badge-gold card-listing__badge">New</span>
+              </div>
+              <div style="padding: 24px; display: grid; gap: 12px;">
+                <div class="card-listing__price">$768,000</div>
+                <div class="card-listing__address">1324 Brookstone Way</div>
+                <div class="card-listing__specs">
+                  <span>4 Beds</span>
+                  <span>3 Baths</span>
+                  <span>2,850 Sq Ft</span>
+                </div>
+                <div class="card-listing__features">
+                  <span class="badge badge-black">Office</span>
+                  <span class="badge badge-black">Backyard</span>
+                  <span class="badge badge-black">Community Pool</span>
+                </div>
+                <div class="card-listing__actions">
+                  <a class="btn btn-primary btn-block" href="/listing.html">View Details</a>
+                  <button class="btn btn-secondary btn-block" data-modal-open="#tour-modal">Request Tour</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="text-center mb-lg">
+          <h2>Start your search with confidence.</h2>
+          <p class="text-grey">Tell us what you need and we’ll build a custom plan that fits your timeline.</p>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+          <div class="form-group">
+            <label class="form-label" for="search-location">Preferred Location</label>
+            <input class="form-input" id="search-location" type="text" placeholder="Charlotte, SouthPark, Ballantyne" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="search-price">Price Range</label>
+            <select class="form-select" id="search-price">
+              <option>$350k - $500k</option>
+              <option>$500k - $750k</option>
+              <option>$750k - $1M</option>
+              <option>$1M+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="search-type">Home Type</label>
+            <select class="form-select" id="search-type">
+              <option>Single Family</option>
+              <option>Townhome</option>
+              <option>Condo</option>
+              <option>New Construction</option>
+            </select>
+          </div>
+          <div class="form-group" style="display: flex; align-items: flex-end;">
+            <button class="btn btn-primary btn-block" data-modal-open="#tour-modal">Match Me</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="flex-between mb-lg" style="flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h2>Featured listings</h2>
+            <p class="text-grey">Handpicked homes with strong value and standout upgrades.</p>
+          </div>
+          <a class="btn btn-secondary" href="/listing.html">See all listings</a>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <article class="card-listing">
+            <div class="card-listing__photo">
+              <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=900&q=80" alt="Modern living room" />
+              <span class="badge badge-gold card-listing__badge">Featured</span>
+            </div>
+            <div style="padding: 24px; display: grid; gap: 10px;">
+              <div class="card-listing__price">$612,000</div>
+              <div class="card-listing__address">908 Cedar Bluff Ct</div>
+              <div class="card-listing__specs">
+                <span>3 Beds</span>
+                <span>2.5 Baths</span>
+                <span>2,100 Sq Ft</span>
+              </div>
+              <div class="card-listing__actions">
+                <a class="btn btn-primary btn-block" href="/listing.html">View Details</a>
+              </div>
+            </div>
+          </article>
+          <article class="card-listing">
+            <div class="card-listing__photo">
+              <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80" alt="Kitchen with island" />
+              <span class="badge badge-red card-listing__badge">Hot</span>
+            </div>
+            <div style="padding: 24px; display: grid; gap: 10px;">
+              <div class="card-listing__price">$845,000</div>
+              <div class="card-listing__address">2217 Hawthorne Park</div>
+              <div class="card-listing__specs">
+                <span>4 Beds</span>
+                <span>3 Baths</span>
+                <span>3,040 Sq Ft</span>
+              </div>
+              <div class="card-listing__actions">
+                <a class="btn btn-primary btn-block" href="/listing.html">View Details</a>
+              </div>
+            </div>
+          </article>
+          <article class="card-listing">
+            <div class="card-listing__photo">
+              <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80" alt="Backyard deck" />
+              <span class="badge badge-black card-listing__badge">New</span>
+            </div>
+            <div style="padding: 24px; display: grid; gap: 10px;">
+              <div class="card-listing__price">$529,000</div>
+              <div class="card-listing__address">540 Magnolia Ridge</div>
+              <div class="card-listing__specs">
+                <span>3 Beds</span>
+                <span>2 Baths</span>
+                <span>1,780 Sq Ft</span>
+              </div>
+              <div class="card-listing__actions">
+                <a class="btn btn-primary btn-block" href="/listing.html">View Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resources" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="text-center mb-lg">
+          <h2>Resources to move faster</h2>
+          <p class="text-grey">We help you get tour-ready, finance-ready, and negotiation-ready.</p>
+        </div>
+        <div class="flex" style="gap: 24px; flex-wrap: wrap; justify-content: center;">
+          <div class="card-resource">
+            <div class="card-resource__icon">🏡</div>
+            <div class="card-resource__title">Buyer Roadmap</div>
+            <p class="card-resource__desc">A 10-step plan covering financing, tours, inspections, and closing.</p>
+            <a class="card-resource__link" href="#contact">Get the guide</a>
+          </div>
+          <div class="card-resource">
+            <div class="card-resource__icon">💬</div>
+            <div class="card-resource__title">Neighborhood Match</div>
+            <p class="card-resource__desc">Tell us your lifestyle and we’ll curate the best areas for you.</p>
+            <a class="card-resource__link" href="#contact">Start the quiz</a>
+          </div>
+          <div class="card-resource">
+            <div class="card-resource__icon">📈</div>
+            <div class="card-resource__title">Market Intel</div>
+            <p class="card-resource__desc">Weekly snapshots of pricing, competition, and new inventory.</p>
+            <a class="card-resource__link" href="#contact">Join the list</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); align-items: center;">
+          <div>
+            <h2>Why clients choose Xccelerating</h2>
+            <p class="text-grey mb-lg">We combine boutique-level care with data-driven insights. From your first tour to the final walkthrough, our team keeps the process organized and proactive.</p>
+            <div class="flex" style="gap: 16px; flex-wrap: wrap;">
+              <div class="card-testimonial">
+                <p class="card-testimonial__quote">“They negotiated our dream home $25k below list and handled every detail.”</p>
+                <div class="flex mt-md" style="gap: 12px; align-items: center;">
+                  <div class="card-testimonial__photo">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80" alt="Client" />
+                  </div>
+                  <div>
+                    <div class="card-testimonial__name">Morgan Lee</div>
+                    <div class="card-testimonial__title">First-time buyer</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid" style="grid-template-columns: 1fr; gap: 16px;">
+            <div class="card-testimonial">
+              <p class="card-testimonial__quote">“The team kept us ahead of every deadline. We closed in 24 days.”</p>
+              <div class="flex mt-md" style="gap: 12px; align-items: center;">
+                <div class="card-testimonial__photo">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Client" />
+                </div>
+                <div>
+                  <div class="card-testimonial__name">Daria Patel</div>
+                  <div class="card-testimonial__title">Relocating buyer</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-testimonial">
+              <p class="card-testimonial__quote">“We loved the market updates. It helped us feel confident with timing.”</p>
+              <div class="flex mt-md" style="gap: 12px; align-items: center;">
+                <div class="card-testimonial__photo">
+                  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Client" />
+                </div>
+                <div>
+                  <div class="card-testimonial__name">Allison Carter</div>
+                  <div class="card-testimonial__title">Move-up buyer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" style="background: #111111; color: #ffffff;">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center;">
+          <div>
+            <h2 class="text-white">Ready to start your search?</h2>
+            <p class="text-grey mb-lg">Tell us your priorities and we’ll craft a custom home search plan within 24 hours.</p>
+            <div class="flex" style="gap: 12px; flex-wrap: wrap;">
+              <button class="btn btn-primary" data-modal-open="#tour-modal">Book a strategy call</button>
+              <a class="btn btn-ghost" href="mailto:hello@xccelerating.com">Email us</a>
+            </div>
+          </div>
+          <form class="card-listing" style="padding: 24px; background: #ffffff;">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Full Name</label>
+              <input class="form-input" id="contact-name" type="text" placeholder="Jordan Ellis" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address</label>
+              <input class="form-input" id="contact-email" type="email" placeholder="jordan@email.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-message">What are you looking for?</label>
+              <textarea class="form-textarea" id="contact-message" placeholder="3 bed, 2 bath, great schools... "></textarea>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Send my request</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer Placeholder -->
-  <footer id="site-footer">
-    <!-- TODO: Footer -->
+  <footer id="site-footer" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Xccelerating Real Estate</div>
+          <p class="footer-text mt-sm">Guiding buyers and sellers with a personalized approach.</p>
+        </div>
+        <div>
+          <div class="footer-heading mb-sm">Company</div>
+          <div class="footer-contact">
+            <a class="footer-link" href="/masterclass.html">Masterclass</a>
+            <a class="footer-link" href="#resources">Resources</a>
+            <a class="footer-link" href="#contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading mb-sm">Contact</div>
+          <div class="footer-contact">
+            <span>hello@xccelerating.com</span>
+            <span>(800) 555-1234</span>
+            <span>Charlotte, NC</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading mb-sm">Follow</div>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legal">© 2025 Xccelerating Real Estate. All rights reserved.</div>
+    </div>
   </footer>
 
-  <!-- Chat Widget Placeholder -->
   <div id="chat-widget"></div>
 
-  <!-- Scripts -->
+  <div class="modal-overlay" id="tour-modal" data-modal>
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Schedule a private tour</h3>
+        <button class="modal-close" data-modal-close aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-md">Share a few details and our team will confirm a time within 24 hours.</p>
+        <div class="form-group">
+          <label class="form-label" for="tour-name">Name</label>
+          <input class="form-input" id="tour-name" type="text" placeholder="Jordan Ellis" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="tour-email">Email</label>
+          <input class="form-input" id="tour-email" type="email" placeholder="you@email.com" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="tour-notes">Preferred times</label>
+          <textarea class="form-textarea" id="tour-notes" placeholder="Saturday afternoon or next weekday evening"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-modal-close>Cancel</button>
+        <button class="btn btn-primary">Submit request</button>
+      </div>
+    </div>
+  </div>
+
   <script src="/js/main.js"></script>
   <script src="/js/components.js"></script>
   <script src="/js/forms.js"></script>

@@ -316,7 +316,8 @@
   transition: right var(--transition-base);
 }
 
-.nav-mobile-menu.open { right: 0; }
+.nav-mobile-menu.open,
+.nav-mobile-menu.is-open { right: 0; }
 
 @media (max-width: 768px) {
   .nav-links { display: none; }

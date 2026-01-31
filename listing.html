@@ -12,9 +12,307 @@
   <link rel="stylesheet" href="/css/pages.css" />
 </head>
 <body>
+  <header id="site-header">
+    <nav class="nav">
+      <div class="nav-container">
+        <a class="nav-logo" href="/index.html" aria-label="Xccelerating Real Estate">
+          <span class="badge badge-gold">Xccelerating</span>
+        </a>
+        <div class="nav-links">
+          <a class="nav-link" href="/index.html">Home</a>
+          <a class="nav-link nav-link--active" href="/listing.html">Listings</a>
+          <a class="nav-link" href="/masterclass.html">Masterclass</a>
+          <a class="nav-link" href="#details">Details</a>
+          <a class="nav-link" href="#tour">Schedule</a>
+        </div>
+        <div class="nav-cta">
+          <button class="btn btn-primary" data-modal-open="#tour-modal">Schedule a Tour</button>
+        </div>
+        <button class="nav-mobile-toggle btn btn-ghost" type="button" data-menu-toggle aria-controls="mobile-menu">
+          Menu
+        </button>
+      </div>
+    </nav>
+    <div class="nav-mobile-menu" id="mobile-menu" data-mobile-menu>
+      <div style="padding: 32px; display: grid; gap: 16px;">
+        <a class="nav-link" href="/index.html">Home</a>
+        <a class="nav-link" href="/listing.html">Listings</a>
+        <a class="nav-link" href="/masterclass.html">Masterclass</a>
+        <a class="nav-link" href="#details">Details</a>
+        <a class="nav-link" href="#tour">Schedule</a>
+        <button class="btn btn-primary" data-modal-open="#tour-modal">Schedule a Tour</button>
+      </div>
+    </div>
+  </header>
+
   <main>
-    <!-- Listing page content placeholder -->
+    <section class="section" style="padding-top: 120px;">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center;">
+          <div>
+            <span class="badge badge-black">Just Listed</span>
+            <h1 class="mt-md">1642 Harper Grove Lane</h1>
+            <p class="text-lg text-grey mb-md">Charlotte, NC 28277 · Ballantyne</p>
+            <div class="card-listing__price mb-md">$824,000</div>
+            <div class="card-listing__specs mb-lg">
+              <span>4 Beds</span>
+              <span>3 Baths</span>
+              <span>3,120 Sq Ft</span>
+              <span>0.28 Acre</span>
+            </div>
+            <div class="flex" style="gap: 12px; flex-wrap: wrap;">
+              <button class="btn btn-primary" data-modal-open="#tour-modal">Schedule tour</button>
+              <button class="btn btn-secondary">Request info</button>
+            </div>
+          </div>
+          <div class="card-listing">
+            <div class="card-listing__photo">
+              <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80" alt="Exterior of listing" />
+              <span class="badge badge-gold card-listing__badge">Open House Sat 12-3</span>
+            </div>
+            <div style="padding: 24px; display: grid; gap: 12px;">
+              <div class="card-listing__features">
+                <span class="badge badge-black">Renovated Kitchen</span>
+                <span class="badge badge-black">3-Car Garage</span>
+                <span class="badge badge-black">Private Yard</span>
+              </div>
+              <p class="text-grey">Walkable to trails, top-rated schools, and dining. Bright open layout with bonus room and main-floor office.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="details" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+          <div class="card-listing" style="padding: 24px;">
+            <h3 class="mb-md">Photo gallery</h3>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px;">
+              <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=400&q=80" alt="Living room" style="width: 100%; border-radius: 8px;" />
+              <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=400&q=80" alt="Kitchen" style="width: 100%; border-radius: 8px;" />
+              <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=400&q=80" alt="Backyard" style="width: 100%; border-radius: 8px;" />
+              <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=400&q=80" alt="Primary bedroom" style="width: 100%; border-radius: 8px;" />
+            </div>
+          </div>
+          <div class="card-listing" style="padding: 24px;">
+            <h3 class="mb-md">Property highlights</h3>
+            <ul class="text-grey" style="display: grid; gap: 12px; padding-left: 16px;">
+              <li>Chef-inspired kitchen with quartz counters and custom cabinetry.</li>
+              <li>Main-level guest suite + dedicated office.</li>
+              <li>Oversized covered patio and fenced backyard.</li>
+              <li>10 minutes to Ballantyne Village and top-rated schools.</li>
+            </ul>
+            <div class="mt-lg">
+              <h4 class="mb-sm">Home facts</h4>
+              <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px;">
+                <div class="badge badge-black">Built 2019</div>
+                <div class="badge badge-black">HOA $52/mo</div>
+                <div class="badge badge-black">MLS #987654</div>
+                <div class="badge badge-black">Energy Star</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-listing" style="padding: 24px;">
+            <h3 class="mb-md">Neighborhood snapshot</h3>
+            <p class="text-grey">Ballantyne offers easy access to greenways, boutique fitness, and upscale dining. Average commute to Uptown is 25 minutes.</p>
+            <div class="mt-md">
+              <div class="counter-number" data-counter="9" data-counter-suffix="/10"></div>
+              <div class="text-sm text-grey">School rating</div>
+            </div>
+            <div class="mt-md">
+              <div class="counter-number" data-counter="14" data-counter-suffix=" days"></div>
+              <div class="text-sm text-grey">Avg. days on market</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tour">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: start;">
+          <div>
+            <h2>Schedule your private tour</h2>
+            <p class="text-grey mb-lg">We’ll confirm available times and send a curated tour plan with neighborhood highlights.</p>
+            <div class="card-testimonial">
+              <p class="card-testimonial__quote">“They arranged three tours in one afternoon and walked us through every detail.”</p>
+              <div class="flex mt-md" style="gap: 12px; align-items: center;">
+                <div class="card-testimonial__photo">
+                  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Client" />
+                </div>
+                <div>
+                  <div class="card-testimonial__name">Jordan & Alex</div>
+                  <div class="card-testimonial__title">Charlotte buyers</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="card-listing" style="padding: 24px;">
+            <div class="form-group">
+              <label class="form-label" for="tour-name">Full name</label>
+              <input class="form-input" id="tour-name" type="text" placeholder="Taylor Morgan" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="tour-email">Email address</label>
+              <input class="form-input" id="tour-email" type="email" placeholder="taylor@email.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="tour-phone">Phone</label>
+              <input class="form-input" id="tour-phone" type="tel" placeholder="(555) 123-4567" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="tour-date">Preferred tour time</label>
+              <input class="form-input" id="tour-date" type="text" placeholder="Saturday, 2-4 PM" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="tour-message">Questions or priorities</label>
+              <textarea class="form-textarea" id="tour-message" placeholder="Backyard size, HOA details, schools"></textarea>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Request tour</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="flex-between mb-lg" style="flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h2>Similar homes you may love</h2>
+            <p class="text-grey">More listings in Ballantyne and nearby neighborhoods.</p>
+          </div>
+          <a class="btn btn-secondary" href="/index.html">Back to search</a>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+          <article class="card-listing">
+            <div class="card-listing__photo">
+              <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80" alt="Home interior" />
+              <span class="badge badge-black card-listing__badge">New</span>
+            </div>
+            <div style="padding: 24px; display: grid; gap: 10px;">
+              <div class="card-listing__price">$799,000</div>
+              <div class="card-listing__address">7810 Maple Ridge Dr</div>
+              <div class="card-listing__specs">
+                <span>4 Beds</span>
+                <span>3 Baths</span>
+                <span>2,940 Sq Ft</span>
+              </div>
+              <div class="card-listing__actions">
+                <a class="btn btn-primary btn-block" href="/listing.html">View Details</a>
+              </div>
+            </div>
+          </article>
+          <article class="card-listing">
+            <div class="card-listing__photo">
+              <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80" alt="Home exterior" />
+              <span class="badge badge-gold card-listing__badge">Featured</span>
+            </div>
+            <div style="padding: 24px; display: grid; gap: 10px;">
+              <div class="card-listing__price">$872,500</div>
+              <div class="card-listing__address">4201 Willow Creek</div>
+              <div class="card-listing__specs">
+                <span>5 Beds</span>
+                <span>4 Baths</span>
+                <span>3,420 Sq Ft</span>
+              </div>
+              <div class="card-listing__actions">
+                <a class="btn btn-primary btn-block" href="/listing.html">View Details</a>
+              </div>
+            </div>
+          </article>
+          <article class="card-listing">
+            <div class="card-listing__photo">
+              <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=900&q=80" alt="Modern home" />
+              <span class="badge badge-red card-listing__badge">Hot</span>
+            </div>
+            <div style="padding: 24px; display: grid; gap: 10px;">
+              <div class="card-listing__price">$690,000</div>
+              <div class="card-listing__address">9632 Ridgeview Ln</div>
+              <div class="card-listing__specs">
+                <span>3 Beds</span>
+                <span>2.5 Baths</span>
+                <span>2,410 Sq Ft</span>
+              </div>
+              <div class="card-listing__actions">
+                <a class="btn btn-primary btn-block" href="/listing.html">View Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer id="site-footer" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Xccelerating Real Estate</div>
+          <p class="footer-text mt-sm">Guiding buyers and sellers with a personalized approach.</p>
+        </div>
+        <div>
+          <div class="footer-heading mb-sm">Company</div>
+          <div class="footer-contact">
+            <a class="footer-link" href="/masterclass.html">Masterclass</a>
+            <a class="footer-link" href="/index.html#resources">Resources</a>
+            <a class="footer-link" href="/index.html#contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading mb-sm">Contact</div>
+          <div class="footer-contact">
+            <span>hello@xccelerating.com</span>
+            <span>(800) 555-1234</span>
+            <span>Charlotte, NC</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading mb-sm">Follow</div>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legal">© 2025 Xccelerating Real Estate. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div id="chat-widget"></div>
+
+  <div class="modal-overlay" id="tour-modal" data-modal>
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Schedule a private tour</h3>
+        <button class="modal-close" data-modal-close aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-md">Let us know the best times and we’ll confirm a tour quickly.</p>
+        <div class="form-group">
+          <label class="form-label" for="modal-name">Name</label>
+          <input class="form-input" id="modal-name" type="text" placeholder="Taylor Morgan" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="modal-email">Email</label>
+          <input class="form-input" id="modal-email" type="email" placeholder="you@email.com" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="modal-notes">Preferred times</label>
+          <textarea class="form-textarea" id="modal-notes" placeholder="Saturday morning or Monday evening"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-modal-close>Cancel</button>
+        <button class="btn btn-primary">Submit request</button>
+      </div>
+    </div>
+  </div>
+
   <script src="/js/main.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/forms.js"></script>
+  <script src="/js/integrations.js"></script>
 </body>
 </html>
