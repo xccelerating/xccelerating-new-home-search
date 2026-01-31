@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You | Masterclass</title>
+  <meta name="description" content="You’re registered for the Xccelerating Masterclass. Check your inbox for your prep materials." />
   <link rel="stylesheet" href="/css/variables.css" />
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/utilities.css" />
@@ -12,9 +13,152 @@
   <link rel="stylesheet" href="/css/pages.css" />
 </head>
 <body class="theme-oig">
-  <main>
-    <!-- Thank you (masterclass) content placeholder -->
+  <header id="site-header">
+    <nav class="nav">
+      <div class="nav-container">
+        <a class="nav-logo" href="/index.html" aria-label="Xccelerating Real Estate">
+          <span class="badge badge-gold">Xccelerating</span>
+        </a>
+        <div class="nav-links">
+          <a class="nav-link" href="/index.html">Home</a>
+          <a class="nav-link" href="/listing.html">Listings</a>
+          <a class="nav-link nav-link--active" href="/masterclass.html">Masterclass</a>
+          <a class="nav-link" href="/index.html#contact">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <a class="btn btn-primary btn-sm" href="/index.html#tour">Book a Tour</a>
+        </div>
+        <button class="nav-mobile-toggle" data-menu-toggle aria-controls="mobile-menu" aria-label="Toggle menu">Menu</button>
+      </div>
+      <div id="mobile-menu" class="nav-mobile-menu" data-mobile-menu>
+        <div class="nav-links" style="flex-direction: column; padding: var(--space-xl); gap: var(--space-md);">
+          <a class="nav-link" href="/index.html">Home</a>
+          <a class="nav-link" href="/listing.html">Listings</a>
+          <a class="nav-link" href="/masterclass.html">Masterclass</a>
+          <a class="nav-link" href="/index.html#contact">Contact</a>
+          <a class="btn btn-primary btn-sm" href="/index.html#tour">Book a Tour</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main style="padding-top: 90px;">
+    <section class="section">
+      <div class="container text-center">
+        <span class="badge badge-gold mb-md">Registration Confirmed</span>
+        <h1 class="mb-md">You’re in! See you at the masterclass.</h1>
+        <p class="text-lg mb-lg">Check your inbox for the workbook and event details. We can’t wait to support your homebuying journey.</p>
+        <div class="flex-center" style="gap: 12px; flex-wrap: wrap;">
+          <a class="btn btn-primary" href="#event-details">Add to calendar</a>
+          <a class="btn btn-secondary" href="/listing.html">Browse listings</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="event-details" style="background: #f7f5fb;">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+          <div style="background: var(--xcc-white); padding: var(--space-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+            <h3 class="mb-sm">Event details</h3>
+            <div class="text-sm" style="line-height: 1.7;">
+              <div><strong>Date:</strong> Thursday, April 24</div>
+              <div><strong>Time:</strong> 6:30 PM ET</div>
+              <div><strong>Location:</strong> Zoom + Charlotte, NC</div>
+            </div>
+            <a class="btn btn-primary btn-sm mt-md" href="#">Add to calendar</a>
+          </div>
+          <div style="background: var(--xcc-white); padding: var(--space-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+            <h3 class="mb-sm">Your prep kit</h3>
+            <p class="text-sm mb-md">Download the workbook and bring your top questions. We’ll personalize our advice.</p>
+            <div class="flex" style="gap: 10px; flex-wrap: wrap;">
+              <a class="btn btn-secondary btn-sm" href="#">Buyer workbook</a>
+              <a class="btn btn-secondary btn-sm" href="#">Budget planner</a>
+            </div>
+          </div>
+          <div style="background: var(--xcc-white); padding: var(--space-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+            <h3 class="mb-sm">Invite a friend</h3>
+            <p class="text-sm mb-md">Know someone who’s buying soon? Share this masterclass and attend together.</p>
+            <a class="btn btn-primary btn-sm" href="#">Share the link</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); align-items: center;">
+          <div>
+            <h2 class="mb-md">What’s next?</h2>
+            <ol class="text-sm" style="line-height: 1.8; padding-left: 18px;">
+              <li>Review the workbook and define your buying priorities.</li>
+              <li>Prepare any financing or neighborhood questions.</li>
+              <li>Join the session 10 minutes early to connect live.</li>
+            </ol>
+          </div>
+          <div class="card-testimonial">
+            <p class="card-testimonial__quote mb-md">“I left the masterclass with a clear action plan and an accepted offer two weeks later.”</p>
+            <div class="flex" style="gap: 12px; align-items: center;">
+              <div class="card-testimonial__photo" style="background: #ddd;"></div>
+              <div>
+                <div class="card-testimonial__name">Monique S.</div>
+                <div class="card-testimonial__title">Charlotte buyer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: #f7f5fb;">
+      <div class="container text-center">
+        <h2 class="mb-md">Want 1:1 support?</h2>
+        <p class="text-lg mb-lg">Schedule a strategy call with the team and get a tailored buying roadmap.</p>
+        <a class="btn btn-primary btn-lg" href="/thank-you-tour.html">Schedule a tour consult</a>
+      </div>
+    </section>
   </main>
+
+  <footer id="site-footer" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Xccelerating Real Estate</div>
+          <p class="footer-text mt-sm">Guiding buyers and sellers with a personalized approach.</p>
+        </div>
+        <div>
+          <div class="footer-heading mb-sm">Company</div>
+          <div class="footer-contact">
+            <a class="footer-link" href="/index.html">Home</a>
+            <a class="footer-link" href="/masterclass.html">Masterclass</a>
+            <a class="footer-link" href="/listing.html">Listings</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading mb-sm">Contact</div>
+          <div class="footer-contact">
+            <span>hello@xccelerating.com</span>
+            <span>(555) 123-4567</span>
+            <span>Charlotte, NC</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading mb-sm">Follow</div>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legal">© 2025 Xccelerating Real Estate. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div id="chat-widget"></div>
+
   <script src="/js/main.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/forms.js"></script>
+  <script src="/js/integrations.js"></script>
 </body>
 </html>

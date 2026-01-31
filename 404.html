@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Page Not Found</title>
+  <meta name="description" content="The page you’re looking for doesn’t exist. Explore listings or return home." />
   <link rel="stylesheet" href="/css/variables.css" />
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/utilities.css" />
@@ -12,9 +13,110 @@
   <link rel="stylesheet" href="/css/pages.css" />
 </head>
 <body>
-  <main>
-    <!-- 404 content placeholder -->
+  <header id="site-header">
+    <nav class="nav">
+      <div class="nav-container">
+        <a class="nav-logo" href="/index.html" aria-label="Xccelerating Real Estate">
+          <span class="badge badge-gold">Xccelerating</span>
+        </a>
+        <div class="nav-links">
+          <a class="nav-link" href="/index.html">Home</a>
+          <a class="nav-link" href="/listing.html">Listings</a>
+          <a class="nav-link" href="/masterclass.html">Masterclass</a>
+          <a class="nav-link" href="/index.html#contact">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <a class="btn btn-primary btn-sm" href="/index.html#tour">Book a Tour</a>
+        </div>
+        <button class="nav-mobile-toggle" data-menu-toggle aria-controls="mobile-menu" aria-label="Toggle menu">Menu</button>
+      </div>
+      <div id="mobile-menu" class="nav-mobile-menu" data-mobile-menu>
+        <div class="nav-links" style="flex-direction: column; padding: var(--space-xl); gap: var(--space-md);">
+          <a class="nav-link" href="/index.html">Home</a>
+          <a class="nav-link" href="/listing.html">Listings</a>
+          <a class="nav-link" href="/masterclass.html">Masterclass</a>
+          <a class="nav-link" href="/index.html#contact">Contact</a>
+          <a class="btn btn-primary btn-sm" href="/index.html#tour">Book a Tour</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main style="padding-top: 90px;">
+    <section class="section">
+      <div class="container text-center">
+        <span class="badge badge-red mb-md">404</span>
+        <h1 class="mb-md">We can’t find that page.</h1>
+        <p class="text-lg mb-lg">The link may be broken or the page has moved. Let’s get you back on track.</p>
+        <div class="flex-center" style="gap: 12px; flex-wrap: wrap;">
+          <a class="btn btn-primary" href="/index.html">Return home</a>
+          <a class="btn btn-secondary" href="/listing.html">Browse listings</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); align-items: center;">
+          <div>
+            <h3 class="mb-sm">Popular destinations</h3>
+            <ul class="text-sm" style="line-height: 1.8; padding-left: 18px;">
+              <li><a class="link" href="/listing.html">Featured listings</a></li>
+              <li><a class="link" href="/masterclass.html">Homebuyer masterclass</a></li>
+              <li><a class="link" href="/index.html#tour">Schedule a tour</a></li>
+            </ul>
+          </div>
+          <div style="background: var(--xcc-white); padding: var(--space-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+            <h4 class="mb-sm">Need help now?</h4>
+            <p class="text-sm mb-md">Chat with our team or send a quick message so we can find what you need.</p>
+            <a class="btn btn-primary btn-sm" href="mailto:hello@xccelerating.com">Email us</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer id="site-footer" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Xccelerating Real Estate</div>
+          <p class="footer-text mt-sm">Guiding buyers and sellers with a personalized approach.</p>
+        </div>
+        <div>
+          <div class="footer-heading mb-sm">Company</div>
+          <div class="footer-contact">
+            <a class="footer-link" href="/index.html">Home</a>
+            <a class="footer-link" href="/masterclass.html">Masterclass</a>
+            <a class="footer-link" href="/listing.html">Listings</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading mb-sm">Contact</div>
+          <div class="footer-contact">
+            <span>hello@xccelerating.com</span>
+            <span>(555) 123-4567</span>
+            <span>Charlotte, NC</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading mb-sm">Follow</div>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legal">© 2025 Xccelerating Real Estate. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div id="chat-widget"></div>
+
   <script src="/js/main.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/forms.js"></script>
+  <script src="/js/integrations.js"></script>
 </body>
 </html>
