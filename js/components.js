@@ -117,13 +117,13 @@ function initChatWidget() {
             <span>Chat with Own It Gyrl</span>
             <button class="chat-close" type="button" data-chat-close aria-label="Close chat">×</button>
           </div>
-          <div class="chat-messages">
+          <div class="chat-messages" data-chat-messages>
             <div class="chat-message chat-message--agent">Hi! How can we help with your home search today?</div>
           </div>
           <div class="chat-quick-replies">
-            <button class="btn btn-secondary btn-sm" type="button">Schedule a tour</button>
-            <button class="btn btn-secondary btn-sm" type="button">Pre‑qualify</button>
-            <button class="btn btn-secondary btn-sm" type="button">Ask a question</button>
+            <button class="btn btn-secondary btn-sm" type="button" data-chat-cta="tour">Schedule a tour</button>
+            <button class="btn btn-secondary btn-sm" type="button" data-chat-cta="prequal">Pre‑qualify</button>
+            <button class="btn btn-secondary btn-sm" type="button" data-chat-cta="question">Ask a question</button>
           </div>
           <div class="chat-input-area">
             <input class="form-input" type="text" placeholder="Type a message" />
@@ -137,12 +137,45 @@ function initChatWidget() {
   const toggle = root.querySelector('[data-chat-toggle]');
   const panel = root.querySelector('[data-chat-panel]');
   const close = root.querySelector('[data-chat-close]');
+  const messages = root.querySelector('[data-chat-messages]');
   if (!toggle || !panel) return;
+
+  const getListingData = () => {
+    const body = document.body;
+    if (body?.dataset?.address) {
+      return {
+        address: body.dataset.address,
+        price: body.dataset.price,
+        beds: body.dataset.beds,
+        baths: body.dataset.baths,
+        sqft: body.dataset.sqft,
+        highlights: body.dataset.highlights,
+        status: body.dataset.status,
+      };
+    }
+    try {
+      return JSON.parse(localStorage.getItem('selectedListing'));
+    } catch (e) {
+      return null;
+    }
+  };
+
+  const injectListingMessage = () => {
+    if (!messages) return;
+    const data = getListingData();
+    if (!data || messages.querySelector('[data-listing-message]')) return;
+    const block = document.createElement('div');
+    block.className = 'chat-message chat-message--agent';
+    block.setAttribute('data-listing-message', 'true');
+    block.innerHTML = `I can help you with <strong>${data.address}</strong> (${data.status}). It’s listed at <strong>${data.price}</strong> with ${data.beds} beds, ${data.baths} baths, and ${data.sqft} sq ft. Highlights: ${data.highlights}. Want me to book a tour?`;
+    messages.appendChild(block);
+  };
 
   const openChat = () => {
     panel.classList.add('open');
     toggle.setAttribute('aria-expanded', 'true');
     panel.setAttribute('aria-hidden', 'false');
+    injectListingMessage();
   };
 
   const closeChat = () => {
@@ -152,13 +185,33 @@ function initChatWidget() {
   };
 
   toggle.addEventListener('click', () => {
-    const isOpen = panel.classList.contains('is-open');
+    const isOpen = panel.classList.contains('open');
     isOpen ? closeChat() : openChat();
   });
 
   if (close) {
     close.addEventListener('click', closeChat);
   }
+
+  document.querySelectorAll('[data-listing-card]').forEach((card) => {
+    card.addEventListener('click', () => {
+      const data = {
+        address: card.dataset.address,
+        price: card.dataset.price,
+        beds: card.dataset.beds,
+        baths: card.dataset.baths,
+        sqft: card.dataset.sqft,
+        highlights: card.dataset.highlights,
+        status: card.dataset.status,
+      };
+      localStorage.setItem('selectedListing', JSON.stringify(data));
+      openChat();
+    });
+  });
+
+  root.querySelectorAll('[data-chat-cta]')?.forEach((btn) => {
+    btn.addEventListener('click', () => openChat());
+  });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') closeChat();

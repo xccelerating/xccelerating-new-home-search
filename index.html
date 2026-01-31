@@ -88,9 +88,14 @@
           </div>
           <div>
             <div class="card-listing" style="padding: 0;">
-              <div class="card-listing__photo">
-                <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=900&q=80" alt="Modern home exterior" />
-                <span class="badge badge-gold card-listing__badge">New</span>
+              <div style="position: relative; background: #0b0b0b; border-radius: 16px; height: 320px; display: grid; place-items: center; color: #fff;">
+                <div style="position:absolute; inset:0; background: linear-gradient(135deg, rgba(75,29,109,0.6), rgba(0,0,0,0.6)); border-radius: 16px;"></div>
+                <div style="position: relative; text-align: center; z-index: 1; padding: 24px;">
+                  <div class="badge badge-gold mb-sm">Video Placeholder</div>
+                  <h3 class="mb-sm">Samantha’s 90‑Second Market Breakdown</h3>
+                  <p class="text-sm" style="max-width: 260px; margin: 0 auto;">Upload your hero video here to instantly capture attention.</p>
+                  <button class="btn btn-primary btn-sm" style="margin-top: 12px;" type="button">▶ Play Preview</button>
+                </div>
               </div>
               <div style="padding: 24px; display: grid; gap: 12px;">
                 <div class="card-listing__price">$768,000</div>
@@ -162,7 +167,7 @@
           <a class="btn btn-secondary" href="/listing.html">See all listings</a>
         </div>
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-          <article class="card-listing">
+          <article class="card-listing" data-listing-card data-address="908 Cedar Bluff Ct" data-price="$612,000" data-beds="3" data-baths="2.5" data-sqft="2,100" data-highlights="Open-concept living, chef's kitchen, fenced yard" data-status="Featured">
             <div class="card-listing__photo">
               <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=900&q=80" alt="Modern living room" />
               <span class="badge badge-gold card-listing__badge">Featured</span>
@@ -180,7 +185,7 @@
               </div>
             </div>
           </article>
-          <article class="card-listing">
+          <article class="card-listing" data-listing-card data-address="2217 Hawthorne Park" data-price="$845,000" data-beds="4" data-baths="3" data-sqft="3,040" data-highlights="Quartz kitchen, large patio, bonus room" data-status="Hot">
             <div class="card-listing__photo">
               <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80" alt="Kitchen with island" />
               <span class="badge badge-red card-listing__badge">Hot</span>
@@ -198,7 +203,7 @@
               </div>
             </div>
           </article>
-          <article class="card-listing">
+          <article class="card-listing" data-listing-card data-address="540 Magnolia Ridge" data-price="$529,000" data-beds="3" data-baths="2" data-sqft="1,780" data-highlights="Updated HVAC, covered deck, cul‑de‑sac" data-status="New">
             <div class="card-listing__photo">
               <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80" alt="Backyard deck" />
               <span class="badge badge-black card-listing__badge">New</span>
